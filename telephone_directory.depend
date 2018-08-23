@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1535032507 source:d:\project\Ñ++\telephone_directory\main.cpp
+	<iostream>
+	<map>
+	<string>
+	<iterator>
+
