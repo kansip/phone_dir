@@ -1,28 +1,28 @@
 #include <iostream>
 #include <map>
-#include <string>ы
+#include <string>
 using namespace std;
 
 map <string, int> phone;
 
 int select(){
     int sel;
-    cout << "Ведите цифру для выбора функции:" << endl;
-    cout << "1 - Вывести список абонентов" << endl;
-    cout << "2 - Добавить абонента" << endl;
-    cout << "3 - Удалить абонента" << endl;
-    cout << "4 - Поиск абонента" << endl;
-    cout << "0 - Выход" << endl;
+    cout << "Г‚ГҐГ¤ГЁГІГҐ Г¶ГЁГґГ°Гі Г¤Г«Гї ГўГ»ГЎГ®Г°Г  ГґГіГ­ГЄГ¶ГЁГЁ:" << endl;
+    cout << "1 - Г‚Г»ГўГҐГ±ГІГЁ Г±ГЇГЁГ±Г®ГЄ Г ГЎГ®Г­ГҐГ­ГІГ®Гў" << endl;
+    cout << "2 - Г„Г®ГЎГ ГўГЁГІГј Г ГЎГ®Г­ГҐГ­ГІГ " << endl;
+    cout << "3 - Г“Г¤Г Г«ГЁГІГј Г ГЎГ®Г­ГҐГ­ГІГ " << endl;
+    cout << "4 - ГЏГ®ГЁГ±ГЄ Г ГЎГ®Г­ГҐГ­ГІГ " << endl;
+    cout << "0 - Г‚Г»ГµГ®Г¤" << endl;
     cin >> sel;
     if (sel==1||sel==2||sel==3||sel==4||sel==0) return sel;
     else{
-        cout << "Недопустимый символ" << endl;
+        cout << "ГЌГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г±ГЁГ¬ГўГ®Г«" << endl;
         select();
     }
 }
 void output(){
-    cout << "Ваш телефонный справочник:" << endl;
-    cout << "ФИО  Телефон" << endl;
+    cout << "Г‚Г Гё ГІГҐГ«ГҐГґГ®Г­Г­Г»Г© Г±ГЇГ°Г ГўГ®Г·Г­ГЁГЄ:" << endl;
+    cout << "Г”Г€ГЋ  Г’ГҐГ«ГҐГґГ®Г­" << endl;
     for(auto elem: phone){
         cout << elem.first << " " << elem.second << endl;
     }
@@ -31,7 +31,7 @@ void output(){
 void ADD(){
     string name;
     int number;
-    cout << "Введите ФИО и номер телефона" << endl;
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г”Г€ГЋ ГЁ Г­Г®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г " << endl;
     cin >> name >> number;
     phone[name] = number;
 }
@@ -39,21 +39,21 @@ void ADD(){
 void sear(){
     string name;
     cin >> name;
-    cout << "Введите ФИО для поиска" << endl;
-    if(phone.find(name) != phone.end()) cout << "Нашлось" <<   endl;
-    else cout << "Элемент не найден" << endl;
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г”Г€ГЋ Г¤Г«Гї ГЇГ®ГЁГ±ГЄГ " << endl;
+    if(phone.find(name) != phone.end()) cout << "ГЌГ ГёГ«Г®Г±Гј" <<   endl;
+    else cout << "ГќГ«ГҐГ¬ГҐГ­ГІ Г­ГҐ Г­Г Г©Г¤ГҐГ­" << endl;
 }
 
 void delet(){
     string name;
-    cout <<"Введите ФИО для удаления"<< endl;
+    cout <<"Г‚ГўГҐГ¤ГЁГІГҐ Г”Г€ГЋ Г¤Г«Гї ГіГ¤Г Г«ГҐГ­ГЁГї"<< endl;
     cin >> name;
-    phone.erase(name);///стираем его в map
+    phone.erase(name);///Г±ГІГЁГ°Г ГҐГ¬ ГҐГЈГ® Гў map
 }
 
 int main(){
     setlocale(LC_ALL, "Russian");
-    cout << "Привет" << endl;
+    cout << "ГЏГ°ГЁГўГҐГІ" << endl;
     int ex=1;//exit in cycle
     while(ex!=0){
             switch(select()){
@@ -73,7 +73,7 @@ int main(){
             ex=0;
         }
     }
-    cout << "До свидания!" << endl;
+    cout << "Г„Г® Г±ГўГЁГ¤Г Г­ГЁГї!" << endl;
     return 0;
 }
 
